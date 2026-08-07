@@ -391,20 +391,27 @@ main { position: relative; }
   list-style: none;
 }
 
-.item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0 0.6rem;
-  padding-block: 0.62rem;
-}
+.item { padding-block: 0.62rem; }
 .item + .item { border-top: 1px solid var(--rule-soft); }
 
+/* Fila sin envoltura: el nombre se parte solo, el precio nunca baja de línea. */
+.item__row {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+/* El nombre se parte en varias líneas antes que empujar el precio hacia abajo. */
 .item__name {
+  flex: 0 1 auto;
+  min-width: 0;
   color: var(--heading);
   font-size: 0.94rem;
   font-weight: 700;
   letter-spacing: 0.01em;
+  text-wrap: pretty;
 }
 
 .item__leader {
@@ -417,6 +424,7 @@ main { position: relative; }
 }
 
 .item__price {
+  margin-left: auto; /* si aun así se envuelve, el precio se queda a la derecha */
   color: var(--price);
   font-size: 0.94rem;
   font-weight: 700;
@@ -425,8 +433,7 @@ main { position: relative; }
 }
 
 .item__desc {
-  flex: 1 0 100%;
-  margin-top: 0.28rem;
+  margin: 0.28rem 0 0;
   color: var(--muted);
   font-size: 0.82rem;
   font-style: italic;

@@ -78,9 +78,11 @@ def render_item(item: dict, lang: str) -> str:
     name = e(item["name"][lang])
     parts = [
         '        <li class="item">',
-        f'          <span class="item__name">{name}</span>',
-        '          <span class="item__leader" aria-hidden="true"></span>',
-        f'          <span class="item__price">{e(price(item["price"]))}</span>',
+        '          <p class="item__row">',
+        f'            <span class="item__name">{name}</span>',
+        '            <span class="item__leader" aria-hidden="true"></span>',
+        f'            <span class="item__price">{e(price(item["price"]))}</span>',
+        "          </p>",
     ]
     if item.get("desc"):
         parts.append(f'          <p class="item__desc">{e(item["desc"][lang])}</p>')
