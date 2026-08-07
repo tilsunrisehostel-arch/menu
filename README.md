@@ -70,6 +70,13 @@ assets/            <- estilos, fuentes, logo e ilustraciones
 qr/                <- códigos QR y tarjetas para imprimir
 ```
 
+El gato y la taza aparecen juntos en la cabecera, delante de un sol naciente —
+la misma pareja que ya venía dibujada en el PDF original.
+
+`assets/og.html` es la plantilla de la imagen que se ve al compartir el enlace
+por WhatsApp o Instagram. Si la cambias, ábrela servida por HTTP, captura el
+recuadro de 1200x630 y guárdala como `assets/og.png`.
+
 Las ilustraciones (gato, taza, hojas) y el logo se extrajeron del PDF original de
 la carta. Las fuentes Montserrat están incluidas en el repositorio (licencia SIL
 Open Font License), así que la página carga rápido y no depende de servicios externos.

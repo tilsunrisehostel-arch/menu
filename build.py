@@ -32,8 +32,8 @@ STRINGS = {
         "nav_label": "Secciones del menú",
         "pdf": "Descargar carta en PDF",
         "top": "Volver arriba",
-        "art_alt_cup": "",
         "menu_word": "Menú",
+        "cat_alt": "Ilustración de un gato siamés sentado junto a una taza de café",
     },
     "en": {
         "title": "Menu | Til Sunrise Specialty Coffee — Cali, Colombia",
@@ -45,15 +45,16 @@ STRINGS = {
         "nav_label": "Menu sections",
         "pdf": "Download menu as PDF",
         "top": "Back to top",
-        "art_alt_cup": "",
         "menu_word": "Menu",
+        "cat_alt": "Illustration of a Siamese cat sitting beside a cup of coffee",
     },
 }
 
 # Ilustraciones decorativas por sección (extraídas del PDF original).
+# La taza ya aparece junto al gato en la cabecera, así que no se repite en
+# "Calientes": quedaban las dos a la vista en la misma pantalla.
 SECTION_ART = {
-    "calientes": ('cup.png', 'section__art--cup'),
-    "smoothies": ('cat.png', 'section__art--cat'),
+    "smoothies": ('leaf-gold2.png', 'section__art--leaf-r'),
     "tortas": ('leaf-gold.png', 'section__art--leaf'),
 }
 
@@ -249,6 +250,15 @@ def render_page(data: dict, lang: str) -> str:
       <nav class="langtoggle" aria-label="{'Idioma' if lang == 'es' else 'Language'}">
 {lang_links}
       </nav>
+    </div>
+
+    <div class="catscene">
+      <span class="catscene__sun" aria-hidden="true"></span>
+      <span class="catscene__ground" aria-hidden="true"></span>
+      <img class="catscene__cat" src="assets/cat.png" width="297" height="513"
+           alt="{e(s["cat_alt"])}" decoding="async">
+      <img class="catscene__cup" src="assets/cup.png" width="399" height="313"
+           alt="" aria-hidden="true" decoding="async">
     </div>
   </div>
 </header>

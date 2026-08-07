@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Til Sunrise — imagen para compartir (fuente de og.png)</title>
+<!--
+  Esta es la plantilla de la imagen que se ve cuando alguien comparte el enlace
+  del menú por WhatsApp, Instagram o Facebook.
+
+  Para regenerarla: abre este archivo servido por HTTP (no con file://, las
+  fuentes no cargan), toma una captura del recuadro de 1200x630 y guárdala
+  como assets/og.png.
+-->
+<style>
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400 800;
+    src: url('fonts/montserrat-latin.woff2') format('woff2');
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #d9d4ca;
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+
+  .og {
+    position: relative;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #fff9ef;
+    display: grid;
+    grid-template-columns: 1fr 470px;
+    align-items: center;
+  }
+
+  .og__leaf { position: absolute; }
+  .og__leaf--tl { top: -118px; left: -128px; width: 215px; transform: rotate(-9deg); }
+  .og__leaf--br { bottom: -104px; left: 44px; width: 165px; transform: rotate(150deg); opacity: 0.35; }
+
+  .og__text {
+    position: relative;
+    z-index: 2;
+    padding: 0 0 0 84px;
+  }
+
+  .og__logo { width: 210px; height: auto; display: block; margin-bottom: 22px; }
+
+  .og__title {
+    margin: 0;
+    color: #123a59;
+    font-size: 132px;
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+  }
+
+  .og__sub {
+    display: block;
+    margin-top: 20px;
+    color: #123a59;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+  }
+
+  .og__rule {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 330px;
+    margin: 30px 0 22px;
+    color: #f6cc4b;
+  }
+  .og__rule::before, .og__rule::after {
+    content: '';
+    flex: 1;
+    height: 4px;
+    background: currentColor;
+    border-radius: 4px;
+  }
+  .og__rule span { font-size: 18px; line-height: 1; }
+
+  .og__tag {
+    margin: 0;
+    max-width: 430px;
+    color: #45543f;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+
+  /* la escena: el gato y la taza delante del sol naciente */
+  .og__scene {
+    position: relative;
+    width: 470px;
+    height: 630px;
+  }
+  .og__sun {
+    position: absolute;
+    left: 46%;
+    bottom: 132px;
+    width: 330px;
+    height: 330px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%,
+      rgba(246,204,75,0.52) 0%, rgba(246,204,75,0.52) 42%,
+      rgba(246,204,75,0.38) 62%, transparent 71%);
+  }
+  .og__ground {
+    position: absolute;
+    left: 47%;
+    bottom: 96px;
+    width: 430px;
+    height: 42px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(ellipse at 50% 50%,
+      rgba(18,58,89,0.3) 0%, rgba(18,58,89,0.14) 46%, transparent 73%);
+  }
+  .og__cat { position: absolute; right: 34px; bottom: 104px; width: 208px; z-index: 2; }
+  .og__cup { position: absolute; left: 6px;  bottom: 98px;  width: 250px; z-index: 3; }
+</style>
+</head>
+<body>
+  <div class="og">
+    <img class="og__leaf og__leaf--tl" src="leaf-navy.png" alt="">
+    <img class="og__leaf og__leaf--br" src="leaf-gold.png" alt="">
+
+    <div class="og__text">
+      <img class="og__logo" src="logo.png" alt="">
+      <h1 class="og__title">Menú<span class="og__sub">Cali, Colombia</span></h1>
+      <p class="og__rule"><span>&#10022;</span></p>
+      <p class="og__tag">Café de especialidad hecho con pasión en Cali para despertar tus mejores días</p>
+    </div>
+
+    <div class="og__scene">
+      <span class="og__sun"></span>
+      <span class="og__ground"></span>
+      <img class="og__cat" src="cat.png" alt="">
+      <img class="og__cup" src="cup.png" alt="">
+    </div>
+  </div>
+</body>
+</html>
