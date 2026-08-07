@@ -1,0 +1,131 @@
+{
+  "_comment": "Fuente de verdad del menu. Edita este archivo y ejecuta 'python build.py' para regenerar index.html y en.html.",
+  "brand": {
+    "name": "Til Sunrise",
+    "full": "Til Sunrise Specialty Coffee",
+    "city": { "es": "CALI, COLOMBIA", "en": "CALI, COLOMBIA" },
+    "instagram": "tilsunrisespecialitycoffee",
+    "tagline_title": { "es": "CAFÉ DE ESPECIALIDAD", "en": "SPECIALTY COFFEE" },
+    "tagline_body": {
+      "es": "Hecho con pasión en Cali para despertar tus mejores días",
+      "en": "Made with passion in Cali to awaken your best days"
+    },
+    "currency_note": {
+      "es": "Precios en pesos colombianos (COP)",
+      "en": "Prices in Colombian pesos (COP)"
+    }
+  },
+  "sections": [
+    {
+      "id": "calientes",
+      "title": { "es": "Calientes", "en": "Hot" },
+      "art": "cup",
+      "items": [
+        { "name": { "es": "Espresso sencillo", "en": "Single espresso" }, "price": "6.000" },
+        { "name": { "es": "Espresso doble", "en": "Double espresso" }, "price": "7.000" },
+        { "name": { "es": "Americano", "en": "Americano" }, "price": "8.000" },
+        { "name": { "es": "Cappuccino", "en": "Cappuccino" }, "price": "10.000" },
+        { "name": { "es": "Cappuccino vainilla", "en": "Vanilla cappuccino" }, "price": "11.000" },
+        { "name": { "es": "Latte", "en": "Latte" }, "price": "10.000" },
+        { "name": { "es": "Flat white", "en": "Flat white" }, "price": "10.000" },
+        { "name": { "es": "Macchiato", "en": "Macchiato" }, "price": "8.000" },
+        { "name": { "es": "Moccachino", "en": "Mocha" }, "price": "12.000" },
+        { "name": { "es": "Chai latte", "en": "Chai latte" }, "price": "10.000" },
+        { "name": { "es": "Milo", "en": "Milo" }, "price": "10.000" },
+        { "name": { "es": "Chocolate", "en": "Hot chocolate" }, "price": "10.000" },
+        { "name": { "es": "Chocolate con queso", "en": "Hot chocolate with cheese" }, "price": "14.000" },
+        { "name": { "es": "Chocolate masmelos", "en": "Hot chocolate with marshmallows" }, "price": "14.000" }
+      ],
+      "box": {
+        "title": { "es": "Adiciones", "en": "Add-ons" },
+        "items": [
+          { "name": { "es": "Adición almendra", "en": "Almond milk" }, "price": "3.000" },
+          { "name": { "es": "Adición leche regular", "en": "Regular milk" }, "price": "2.000" }
+        ]
+      }
+    },
+    {
+      "id": "frios",
+      "title": { "es": "Fríos", "en": "Cold" },
+      "items": [
+        { "name": { "es": "Iced latte", "en": "Iced latte" }, "price": "12.000" },
+        { "name": { "es": "Granizado de café", "en": "Frozen coffee" }, "price": "16.000" },
+        { "name": { "es": "Malteada de café", "en": "Coffee milkshake" }, "price": "18.000" },
+        { "name": { "es": "Milo frío", "en": "Iced Milo" }, "price": "12.000" },
+        { "name": { "es": "Iced chai latte", "en": "Iced chai latte" }, "price": "12.000" },
+        { "name": { "es": "Jugos naturales", "en": "Fresh juices" }, "price": "12.000" },
+        { "name": { "es": "Limonada natural", "en": "Fresh lemonade" }, "price": "10.000" },
+        {
+          "name": { "es": "Sodas italianas", "en": "Italian sodas" },
+          "price": "16.000",
+          "desc": { "es": "Frutos rojos, amarillos, café", "en": "Red berries, yellow fruits, coffee" }
+        }
+      ]
+    },
+    {
+      "id": "filtrados",
+      "title": { "es": "Filtrados", "en": "Filter coffee" },
+      "items": [
+        { "name": { "es": "Filtrado x2 tazas", "en": "Filter coffee — 2 cups" }, "price": "18.000" },
+        { "name": { "es": "Filtrado x3 tazas", "en": "Filter coffee — 3 cups" }, "price": "26.000" }
+      ]
+    },
+    {
+      "id": "smoothies",
+      "title": { "es": "Smoothies", "en": "Smoothies" },
+      "style": "stacked",
+      "art": "cat",
+      "items": [
+        {
+          "name": { "es": "Sunrise", "en": "Sunrise" },
+          "price": "16.000",
+          "desc": {
+            "es": "Piña, yogurt griego, jengibre, maracuyá, hierbabuena, miel de abeja y jugo de naranja.",
+            "en": "Pineapple, Greek yogurt, ginger, passion fruit, spearmint, honey and orange juice."
+          }
+        },
+        {
+          "name": { "es": "Tropical cacao", "en": "Tropical cacao" },
+          "price": "16.000",
+          "desc": {
+            "es": "Banano, crema de maní, cacao, miel, canela, maca y leche de avena.",
+            "en": "Banana, peanut butter, cacao, honey, cinnamon, maca and oat milk."
+          }
+        },
+        {
+          "name": { "es": "Green Cali", "en": "Green Cali" },
+          "price": "16.000",
+          "desc": {
+            "es": "Espinaca, manzana, apio, piña, espirulina, hierbabuena y jugo de naranja.",
+            "en": "Spinach, apple, celery, pineapple, spirulina, spearmint and orange juice."
+          }
+        },
+        {
+          "name": { "es": "Mango del Valle", "en": "Mango del Valle" },
+          "price": "16.000",
+          "desc": {
+            "es": "Mango, banano, yogurt griego, cúrcuma y agua de coco.",
+            "en": "Mango, banana, Greek yogurt, turmeric and coconut water."
+          }
+        },
+        {
+          "name": { "es": "Sunset", "en": "Sunset" },
+          "price": "16.000",
+          "desc": {
+            "es": "Banano, fresas, yogurt griego, miel de abeja y maracuyá.",
+            "en": "Banana, strawberries, Greek yogurt, honey and passion fruit."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tortas",
+      "title": { "es": "Tortas", "en": "Cakes" },
+      "items": [
+        { "name": { "es": "Torta chocolate", "en": "Chocolate cake" }, "price": "15.000" },
+        { "name": { "es": "Torta naranja y amapola", "en": "Orange & poppy seed cake" }, "price": "12.000" },
+        { "name": { "es": "Torta zanahoria", "en": "Carrot cake" }, "price": "12.000" }
+      ]
+    }
+  ]
+}

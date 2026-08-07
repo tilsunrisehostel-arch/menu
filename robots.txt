@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tilsunrisehostel-arch.github.io/menu/sitemap.xml
