@@ -70,11 +70,6 @@
   --shadow: 0 1px 2px rgba(18, 58, 89, 0.05), 0 8px 24px -12px rgba(18, 58, 89, 0.22);
   --art-opacity: 1;
 
-  /* sol naciente y sombra de la escena del gato */
-  --sun-core: rgba(246, 204, 75, 0.52);
-  --sun-edge: rgba(246, 204, 75, 0.38);
-  --scene-shadow: rgba(18, 58, 89, 0.3);
-
   --wrap: 40rem;
   --pad: clamp(1.15rem, 5vw, 2rem);
 }
@@ -94,10 +89,6 @@
     --chip-bg: rgba(255, 255, 255, 0.06);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 30px -14px rgba(0, 0, 0, 0.7);
     --art-opacity: 0.85;
-
-    --sun-core: rgba(246, 204, 75, 0.34);
-    --sun-edge: rgba(246, 204, 75, 0.2);
-    --scene-shadow: rgba(0, 0, 0, 0.45);
   }
 }
 
@@ -309,87 +300,19 @@ a { color: inherit; }
 }
 
 /* --- El gato de la casa -------------------------------------------------
-   El gato y la taza son la pareja que ya venía en el PDF original. Aquí se
-   colocan delante de un sol naciente, que es de donde viene el nombre del
-   café. Las medidas van en porcentaje sobre un contenedor con proporción
-   fija, así la escena escala sin descuadrarse y sin mover el resto. */
+   El gato y la taza van en una sola imagen, extraída del PDF con la misma
+   posición relativa que tienen en la carta impresa (ver make-art.py). Así no
+   hay que recolocarlos por CSS ni pueden quedar separados. */
 
 .catscene {
-  position: relative;
-  width: min(15.5rem, 62vw);
+  display: block;
+  width: min(14rem, 56vw);
+  height: auto;
   margin: clamp(1.5rem, 6vw, 2.25rem) auto 0;
-  aspect-ratio: 5 / 4;
-}
-
-/* sol naciente */
-.catscene__sun {
-  position: absolute;
-  left: 50%;
-  bottom: 15%;
-  width: 68%;
-  aspect-ratio: 1;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: radial-gradient(
-    circle at 50% 50%,
-    var(--sun-core) 0%,
-    var(--sun-core) 42%,
-    var(--sun-edge) 62%,
-    transparent 71%
-  );
-  z-index: 0;
-}
-
-/* En oscuro, un dorado translúcido sobre azul marino da un verde sucio.
-   Así que el sol pasa a ser un aro nítido con un resplandor muy tenue. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) .catscene__sun {
-    background: radial-gradient(
-      circle at 50% 50%,
-      rgba(255, 216, 130, 0.07) 0%,
-      rgba(255, 216, 130, 0.03) 58%,
-      transparent 71%
-    );
-    border: 0.14rem solid rgba(246, 204, 75, 0.72);
-  }
-}
-
-/* sombra que apoya al gato y la taza en el suelo */
-.catscene__ground {
-  position: absolute;
-  left: 50%;
-  bottom: 1%;
-  width: 86%;
-  height: 8%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse at 50% 50%,
-    var(--scene-shadow) 0%,
-    color-mix(in srgb, var(--scene-shadow) 45%, transparent) 46%,
-    transparent 73%
-  );
-  z-index: 1;
-}
-
-.catscene__cat {
-  position: absolute;
-  right: 3%;
-  bottom: 3.5%;
-  width: 45%;
-  z-index: 2;
-}
-
-.catscene__cup {
-  position: absolute;
-  left: 1%;
-  bottom: 2%;
-  width: 54%;
-  z-index: 3;
 }
 
 @media (min-width: 34rem) {
-  .catscene { width: 17.5rem; }
+  .catscene { width: 15.5rem; }
 }
 
 /* --- Sticky section nav ------------------------------------------------- */
@@ -584,12 +507,6 @@ main {
 
 /* Section artwork */
 .section__art { z-index: 0; }
-.section__art--cup {
-  top: 0.9rem;
-  right: calc(var(--pad) * -0.3);
-  width: clamp(5.5rem, 22vw, 8rem);
-  opacity: calc(var(--art-opacity) * 0.95);
-}
 .section__art--leaf {
   bottom: 1.5rem;
   left: -2.5rem;
@@ -696,10 +613,7 @@ main {
   .footer__links,
   .skip { display: none !important; }
   .art { display: none !important; }
-  /* el gato se queda, pero pequeño y sin el sol: gastaría tinta sin aportar */
   .catscene { width: 34mm; margin: 3mm auto 0; }
-  .catscene__sun,
-  .catscene__ground { display: none !important; }
   body { font-size: 10pt; }
   .hero { padding-block: 0 0.5rem; }
   main .wrap { max-width: none; padding-inline: 0; }

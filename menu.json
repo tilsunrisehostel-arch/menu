@@ -49,6 +49,14 @@
       "title": { "es": "Fríos", "en": "Cold" },
       "items": [
         { "name": { "es": "Iced latte", "en": "Iced latte" }, "price": "12.000" },
+        {
+          "name": { "es": "Cold brew", "en": "Cold brew" },
+          "price": "12.000",
+          "desc": {
+            "es": "Adición zumo de limón $2.000",
+            "en": "Add lemon juice $2.000"
+          }
+        },
         { "name": { "es": "Granizado de café", "en": "Frozen coffee" }, "price": "16.000" },
         { "name": { "es": "Malteada de café", "en": "Coffee milkshake" }, "price": "18.000" },
         { "name": { "es": "Milo frío", "en": "Iced Milo" }, "price": "12.000" },
@@ -101,14 +109,6 @@
           }
         },
         {
-          "name": { "es": "Mango del Valle", "en": "Mango del Valle" },
-          "price": "16.000",
-          "desc": {
-            "es": "Mango, banano, yogurt griego, cúrcuma y agua de coco.",
-            "en": "Mango, banana, Greek yogurt, turmeric and coconut water."
-          }
-        },
-        {
           "name": { "es": "Sunset", "en": "Sunset" },
           "price": "16.000",
           "desc": {
@@ -120,11 +120,13 @@
     },
     {
       "id": "tortas",
-      "title": { "es": "Tortas", "en": "Cakes" },
+      "title": { "es": "Tortas y dulces", "en": "Cakes & sweets" },
       "items": [
         { "name": { "es": "Torta chocolate", "en": "Chocolate cake" }, "price": "15.000" },
         { "name": { "es": "Torta naranja y amapola", "en": "Orange & poppy seed cake" }, "price": "12.000" },
-        { "name": { "es": "Torta zanahoria", "en": "Carrot cake" }, "price": "12.000" }
+        { "name": { "es": "Torta zanahoria", "en": "Carrot cake" }, "price": "12.000" },
+        { "name": { "es": "Alfajores", "en": "Alfajores" }, "price": "5.000" },
+        { "name": { "es": "Alfajores de chocolate", "en": "Chocolate alfajores" }, "price": "7.000" }
       ]
     }
   ]

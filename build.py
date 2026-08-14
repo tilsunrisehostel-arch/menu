@@ -252,14 +252,8 @@ def render_page(data: dict, lang: str) -> str:
       </nav>
     </div>
 
-    <div class="catscene">
-      <span class="catscene__sun" aria-hidden="true"></span>
-      <span class="catscene__ground" aria-hidden="true"></span>
-      <img class="catscene__cat" src="assets/cat.png" width="297" height="513"
-           alt="{e(s["cat_alt"])}" decoding="async">
-      <img class="catscene__cup" src="assets/cup.png" width="399" height="313"
-           alt="" aria-hidden="true" decoding="async">
-    </div>
+    <img class="catscene" src="assets/cat-and-cup.png" width="400" height="557"
+         alt="{e(s["cat_alt"])}" decoding="async">
   </div>
 </header>
 
