@@ -26,7 +26,7 @@ STRINGS = {
         "title": "Menú | Til Sunrise Specialty Coffee — Cali, Colombia",
         "description": (
             "Carta de Til Sunrise Specialty Coffee en Cali, Colombia: "
-            "café de especialidad, bebidas frías, smoothies y tortas."
+            "café de especialidad, bebidas frías, smoothies y postres."
         ),
         "skip": "Ir al menú",
         "nav_label": "Secciones del menú",
@@ -39,7 +39,7 @@ STRINGS = {
         "title": "Menu | Til Sunrise Specialty Coffee — Cali, Colombia",
         "description": (
             "Menu for Til Sunrise Specialty Coffee in Cali, Colombia: "
-            "specialty coffee, cold drinks, smoothies and cakes."
+            "specialty coffee, cold drinks, smoothies and desserts."
         ),
         "skip": "Skip to menu",
         "nav_label": "Menu sections",
@@ -55,7 +55,7 @@ STRINGS = {
 # "Calientes": quedaban las dos a la vista en la misma pantalla.
 SECTION_ART = {
     "smoothies": ('leaf-gold2.png', 'section__art--leaf-r'),
-    "tortas": ('leaf-gold.png', 'section__art--leaf'),
+    "postres": ("leaf-gold.png", "section__art--leaf"),
 }
 
 IG_SVG = (

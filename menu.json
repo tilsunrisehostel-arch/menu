@@ -49,20 +49,15 @@
       "title": { "es": "Fríos", "en": "Cold" },
       "items": [
         { "name": { "es": "Iced latte", "en": "Iced latte" }, "price": "12.000" },
-        {
-          "name": { "es": "Cold brew", "en": "Cold brew" },
-          "price": "12.000",
-          "desc": {
-            "es": "Adición zumo de limón $2.000",
-            "en": "Add lemon juice $2.000"
-          }
-        },
+        { "name": { "es": "Cold brew", "en": "Cold brew" }, "price": "10.000" },
+        { "name": { "es": "Orange coffee", "en": "Orange coffee" }, "price": "12.000" },
         { "name": { "es": "Granizado de café", "en": "Frozen coffee" }, "price": "16.000" },
         { "name": { "es": "Malteada de café", "en": "Coffee milkshake" }, "price": "18.000" },
         { "name": { "es": "Milo frío", "en": "Iced Milo" }, "price": "12.000" },
         { "name": { "es": "Iced chai latte", "en": "Iced chai latte" }, "price": "12.000" },
         { "name": { "es": "Jugos naturales", "en": "Fresh juices" }, "price": "12.000" },
         { "name": { "es": "Limonada natural", "en": "Fresh lemonade" }, "price": "10.000" },
+        { "name": { "es": "Lulada", "en": "Lulada" }, "price": "16.000" },
         {
           "name": { "es": "Sodas italianas", "en": "Italian sodas" },
           "price": "16.000",
@@ -119,14 +114,14 @@
       ]
     },
     {
-      "id": "tortas",
-      "title": { "es": "Tortas y dulces", "en": "Cakes & sweets" },
+      "id": "postres",
+      "title": { "es": "Postres", "en": "Desserts" },
       "items": [
         { "name": { "es": "Torta chocolate", "en": "Chocolate cake" }, "price": "15.000" },
         { "name": { "es": "Torta naranja y amapola", "en": "Orange & poppy seed cake" }, "price": "12.000" },
         { "name": { "es": "Torta zanahoria", "en": "Carrot cake" }, "price": "12.000" },
-        { "name": { "es": "Alfajores", "en": "Alfajores" }, "price": "5.000" },
-        { "name": { "es": "Alfajores de chocolate", "en": "Chocolate alfajores" }, "price": "7.000" }
+        { "name": { "es": "Alfajor con arequipe", "en": "Alfajor with dulce de leche" }, "price": "5.000" },
+        { "name": { "es": "Alfajor de chocolate", "en": "Chocolate alfajor" }, "price": "7.000" }
       ]
     }
   ]
