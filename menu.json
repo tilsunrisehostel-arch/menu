@@ -114,6 +114,108 @@
       ]
     },
     {
+      "id": "desayunos",
+      "title": { "es": "Desayunos", "en": "Breakfasts" },
+      "note": {
+        "es": "Todos los huevos vienen acompañados de pan de masa madre, queso crema, mermelada y bebida a elección: tinto, café con leche o chocolate caliente.",
+        "en": "All egg dishes come with sourdough bread, cream cheese, jam and a drink of your choice: black coffee, coffee with milk or hot chocolate."
+      },
+      "items": [
+        {
+          "name": { "es": "Huevos al gusto", "en": "Eggs your way" },
+          "price": "20.000",
+          "desc": { "es": "Revueltos o fritos.", "en": "Scrambled or fried." }
+        },
+        {
+          "name": { "es": "Huevos pericos", "en": "Huevos pericos" },
+          "price": "22.000",
+          "desc": {
+            "es": "Revueltos con cebolla y tomate.",
+            "en": "Scrambled with onion and tomato."
+          }
+        },
+        {
+          "name": { "es": "Huevos revueltos con jamón y queso", "en": "Scrambled eggs with ham and cheese" },
+          "price": "22.000"
+        },
+        {
+          "name": { "es": "Huevos rancheros", "en": "Huevos rancheros" },
+          "price": "22.000",
+          "desc": {
+            "es": "Revueltos con salchicha ranchera.",
+            "en": "Scrambled with Colombian ranchera sausage."
+          }
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "title": { "es": "Sándwiches y tostadas", "en": "Sandwiches & toasts" },
+      "style": "stacked",
+      "items": [
+        {
+          "name": { "es": "Sándwich de pollo al pesto", "en": "Chicken pesto sandwich" },
+          "price": "24.000",
+          "desc": {
+            "es": "Pan de masa madre, queso mozzarella, tomate fresco en rodajas, rúgula, filete de pollo, pesto y queso crema.",
+            "en": "Sourdough bread, mozzarella, fresh sliced tomato, arugula, chicken breast, pesto and cream cheese."
+          }
+        },
+        {
+          "name": { "es": "Sándwich de jamón y queso", "en": "Ham and cheese sandwich" },
+          "price": "22.000",
+          "desc": {
+            "es": "Pan de masa madre, queso holandés, jamón de pavo finas hierbas, rúgula, tomate fresco en rodajas, tocineta y queso crema.",
+            "en": "Sourdough bread, Dutch cheese, herbed turkey ham, arugula, fresh sliced tomato, bacon and cream cheese."
+          }
+        },
+        {
+          "name": { "es": "Tostada Sunrise", "en": "Sunrise toast" },
+          "price": "18.000",
+          "desc": {
+            "es": "Pan de masa madre, queso crema, huevos revueltos, tocineta y aguacate en rodajas.",
+            "en": "Sourdough bread, cream cheese, scrambled eggs, bacon and sliced avocado."
+          }
+        },
+        {
+          "name": { "es": "Tostada napolitana", "en": "Neapolitan toast" },
+          "price": "15.000",
+          "desc": {
+            "es": "Pan de masa madre, pasta de tomate, queso mozzarella, tomate fresco en rodajas, aceite de oliva y pimienta.",
+            "en": "Sourdough bread, tomato sauce, mozzarella, fresh sliced tomato, olive oil and black pepper."
+          }
+        }
+      ]
+    },
+    {
+      "id": "amasijos",
+      "title": { "es": "Amasijos", "en": "Colombian breads" },
+      "items": [
+        {
+          "name": { "es": "Arepa de chontaduro con queso", "en": "Chontaduro arepa with cheese" },
+          "price": "10.000",
+          "desc": {
+            "es": "Con suero costeño y queso cuajada.",
+            "en": "Peach palm fruit arepa, served with Colombian soured cream and fresh curd cheese."
+          }
+        },
+        {
+          "name": { "es": "Pandebono", "en": "Pandebono" },
+          "price": "3.000",
+          "desc": { "en": "Colombian cheese bread." }
+        },
+        { "name": { "es": "Pandebono x4", "en": "Pandebono — 4 pieces" }, "price": "10.000" },
+        {
+          "name": { "es": "Pandebono canasta x6", "en": "Pandebono — basket of 6" },
+          "price": "18.000",
+          "desc": {
+            "es": "Acompañado de queso crema y mermelada o arequipe.",
+            "en": "Served with cream cheese and jam or dulce de leche."
+          }
+        }
+      ]
+    },
+    {
       "id": "postres",
       "title": { "es": "Postres", "en": "Desserts" },
       "items": [

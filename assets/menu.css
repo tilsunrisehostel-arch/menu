@@ -468,6 +468,22 @@ main {
   max-width: 30rem;
 }
 
+/* Nota de seccion: lo que incluye todo un grupo de platos (p.ej. los desayunos) */
+.section__note {
+  position: relative;
+  z-index: 1;
+  max-width: 34rem;
+  margin: clamp(0.9rem, 3.5vw, 1.15rem) 0 0;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--accent);
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-style: italic;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.section__note + .items { margin-top: clamp(1rem, 4vw, 1.4rem); }
+
 /* Adiciones box */
 .box {
   position: relative;
@@ -627,6 +643,11 @@ main {
   }
   .section__title { font-size: 15pt; }
   .item { padding-block: 0.3rem; }
+  .section__note {
+    max-width: none;
+    font-size: 8.5pt;
+    break-inside: avoid;
+  }
   .box { break-inside: avoid; }
   a { text-decoration: none; }
 }

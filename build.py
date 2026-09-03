@@ -26,7 +26,7 @@ STRINGS = {
         "title": "Menú | Til Sunrise Specialty Coffee — Cali, Colombia",
         "description": (
             "Carta de Til Sunrise Specialty Coffee en Cali, Colombia: "
-            "café de especialidad, bebidas frías, smoothies y postres."
+            "café de especialidad, desayunos, sándwiches, smoothies y postres."
         ),
         "skip": "Ir al menú",
         "nav_label": "Secciones del menú",
@@ -39,7 +39,7 @@ STRINGS = {
         "title": "Menu | Til Sunrise Specialty Coffee — Cali, Colombia",
         "description": (
             "Menu for Til Sunrise Specialty Coffee in Cali, Colombia: "
-            "specialty coffee, cold drinks, smoothies and desserts."
+            "specialty coffee, breakfasts, sandwiches, smoothies and desserts."
         ),
         "skip": "Skip to menu",
         "nav_label": "Menu sections",
@@ -85,8 +85,9 @@ def render_item(item: dict, lang: str) -> str:
         f'            <span class="item__price">{e(price(item["price"]))}</span>',
         "          </p>",
     ]
-    if item.get("desc"):
-        parts.append(f'          <p class="item__desc">{e(item["desc"][lang])}</p>')
+    desc = (item.get("desc") or {}).get(lang)
+    if desc:
+        parts.append(f'          <p class="item__desc">{e(desc)}</p>')
     parts.append("        </li>")
     return "\n".join(parts)
 
@@ -109,8 +110,15 @@ def render_section(section: dict, lang: str) -> str:
         '        <div class="section__head">',
         f'          <h2 class="section__title" id="{e(section["id"])}-title">{title}</h2>',
         "        </div>",
-        f'        <ul class="items{stacked}">',
     ]
+
+    # Nota opcional de sección: lo que incluye todo un grupo de platos
+    # (p.ej. la bebida y el pan que acompañan a todos los desayunos).
+    note = section.get("note")
+    if note:
+        out.append(f'        <p class="section__note">{e(note[lang])}</p>')
+
+    out.append(f'        <ul class="items{stacked}">')
     out += [render_item(item, lang) for item in section["items"]]
     out.append("        </ul>")
 
@@ -144,11 +152,12 @@ def render_jsonld(data: dict, lang: str) -> str:
                 {
                     "@type": "MenuSection",
                     "name": section["title"][lang],
+                    **({"description": section["note"][lang]} if section.get("note") else {}),
                     "hasMenuItem": [
                         {
                             "@type": "MenuItem",
                             "name": item["name"][lang],
-                            **({"description": item["desc"][lang]} if item.get("desc") else {}),
+                            **({"description": item["desc"][lang]} if (item.get("desc") or {}).get(lang) else {}),
                             "offers": {
                                 "@type": "Offer",
                                 "price": item["price"].replace(".", ""),

@@ -23,6 +23,25 @@ En un par de minutos la página web queda actualizada.
 > directamente en GitHub. Pero recuerda copiar el cambio a `menu.json`, porque
 > la próxima vez que alguien ejecute `build.py` se regeneran desde ahí.
 
+### Dos detalles útiles al editar `menu.json`
+
+**Nota de sección.** Una sección puede llevar una línea que aplica a todos sus platos
+—como la de Desayunos, que explica qué acompaña a todos los huevos. Se escribe así,
+al mismo nivel que `"items"`:
+
+```json
+"note": { "es": "Todos los huevos vienen...", "en": "All egg dishes come with..." }
+```
+
+**Descripción en un solo idioma.** A veces una aclaración solo hace falta en inglés:
+un colombiano no necesita que le expliquen qué es un pandebono, pero un viajero sí.
+En ese caso basta con poner el idioma que hace falta y la otra página simplemente
+no muestra nada:
+
+```json
+"desc": { "en": "Colombian cheese bread." }
+```
+
 ## Imprimir los códigos QR
 
 En la carpeta `qr/` ya están listos:
