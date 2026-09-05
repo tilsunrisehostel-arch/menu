@@ -84,7 +84,8 @@ make-qr.py         <- genera y verifica los códigos QR
 make-cards.py      <- genera las tarjetas imprimibles
 index.html         <- menú en español   (generado)
 en.html            <- menú en inglés    (generado)
-menu.pdf           <- la carta original en PDF, enlazada desde el pie de página
+menu.pdf           <- la carta original en PDF; ya no se enlaza desde la web,
+                      pero make-art.py saca de ahí las ilustraciones
 assets/            <- estilos, fuentes, logo e ilustraciones
 qr/                <- códigos QR y tarjetas para imprimir
 ```

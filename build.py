@@ -30,7 +30,6 @@ STRINGS = {
         ),
         "skip": "Ir al menú",
         "nav_label": "Secciones del menú",
-        "pdf": "Descargar carta en PDF",
         "top": "Volver arriba",
         "menu_word": "Menú",
         "cat_alt": "Ilustración de un gato siamés sentado junto a una taza de café",
@@ -43,7 +42,6 @@ STRINGS = {
         ),
         "skip": "Skip to menu",
         "nav_label": "Menu sections",
-        "pdf": "Download menu as PDF",
         "top": "Back to top",
         "menu_word": "Menu",
         "cat_alt": "Illustration of a Siamese cat sitting beside a cup of coffee",
@@ -296,7 +294,6 @@ def render_page(data: dict, lang: str) -> str:
     </a>
 
     <p class="footer__links">
-      <a href="menu.pdf">{e(s["pdf"])}</a>
       <a href="{e(other_file)}" lang="{other_lang}">{e(other_label)}</a>
       <a href="#top">{e(s["top"])}</a>
     </p>
