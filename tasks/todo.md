@@ -24,9 +24,9 @@ Requisitos: Python 3 con `segno` y `pillow` (ya instalados en esta máquina).
 
 ---
 
-## Sesión 2026-09-03 → 2026-09-08
+## Sesión 2026-09-03 → 2026-09-09
 
-Tres despliegues, todos verificados contra la URL en vivo (no contra la copia local).
+Cuatro despliegues, todos verificados contra la URL en vivo (no contra la copia local).
 
 ### 1. `946e5e4` — comida: desayunos, sándwiches y tostadas, amasijos
 
@@ -69,6 +69,53 @@ textos "Descargar carta en PDF" / "Download menu as PDF", ya sin uso.
 
 Total en vivo: **51 platos** + 2 adiciones.
 
+### 4. `PENDIENTE-HASH` — cuadrar con la carta impresa
+
+La dueña mandó fotos de la carta diseñada (dos páginas) y pidió que la web
+coincidiera. Se transcribieron las dos imágenes tres veces por separado y se
+compararon contra `menu.json`; después, otras tres pasadas independientes
+(por conteo, por precio y por ingrediente) confirmaron que ya coinciden.
+
+**Calientes:** vuelve `Cappuccino vainilla` $11.000, entran `Aromática` $5.000
+e `Infusión de frutas` $7.500, y sale `Chocolate masmelos`.
+
+**Adiciones:** la caja cambia entera — antes almendra y leche regular; ahora
+leche de avena $3.000, zumo de limón / michelada $3.000 y adición de licor $8.000.
+
+**Postres:** sale `Torta naranja y amapola`. Los dos cheesecakes de frutas se
+juntan en uno solo, `Cheesecake` $17.000. `Torta banano` pasa a `Torta de
+banano`. El orden queda como en la carta impresa.
+
+**Amasijos:** la arepa de chontaduro pasa de $10.000 a $15.000, y se agrega una
+**segunda** arepa de $18.000 con queso crema y mermelada o arequipe.
+`Pandebono canasta x6` pasa a llamarse `Pandebono x6`.
+
+**Desayunos:** `Huevos revueltos con jamón y queso` se parte en nombre
+(`Huevos revueltos`) y descripción (`Con jamón y queso`), como en la carta.
+
+Fríos, filtrados, smoothies y sándwiches ya coincidían: no se tocaron.
+
+#### Defectos de la carta impresa (no copiarlos)
+
+- En el bloque de amasijos, la descripción de la arepa **se encima** sobre la
+  línea de `PANDEBONO`, y parece un tachado. No lo es: el pandebono de $3.000
+  es un producto normal. Es un choque de cajas de texto del diseño.
+- `AREPA DE CHONTADURO` aparece **dos veces** y hay cinco precios para cuatro
+  filas. Confirmado con la dueña: **son dos arepas distintas**, $15.000 y $18.000.
+- El título impreso dice `SÁNDWICHES Y TOSTADOS`; en la web se deja
+  `Sándwiches y tostadas`, que es lo correcto para los platos que lista.
+- La carta impresa trae varios errores de tildes y comas (`Piña.`, `maracuya`,
+  `mani`). La web mantiene la ortografía correcta a propósito.
+
+#### Lo que se decidió NO copiar de la carta impresa
+
+- La **nota de desayunos** se queda, aunque no está impresa: explica el pan, el
+  queso crema, la mermelada y la bebida que van incluidos, y es lo que justifica
+  el precio de $20.000–$22.000.
+- **Postres y Amasijos siguen separados.** La carta impresa los junta en
+  `POSTRES Y PANES` por espacio; la web tiene barra de secciones y no lo necesita.
+- El **inglés se queda**. La carta impresa es solo en español.
+
 ---
 
 ## Decisiones de traducción (para no deshacerlas sin querer)
@@ -88,12 +135,14 @@ Total en vivo: **51 platos** + 2 adiciones.
 
 ## Pendiente
 
-- [ ] **Frutas de los cheesecakes.** "Cheesecake de frutos amarillos / rojos" no le
-      dice nada a un extranjero. No se le puso descripción porque **no sabemos qué
-      frutas llevan** e inventarlas en una carta en vivo sería mentir. En cuanto la
-      dueña las diga, se agrega descripción a los dos.
-      (Nota: `Sodas italianas` ya usa "frutos rojos, amarillos" sin explicar, así
-      que al menos es coherente.)
+- [x] ~~Frutas de los cheesecakes~~ — resuelto por la carta impresa: ya no son dos
+      cheesecakes de frutas sino **uno solo**, `Cheesecake` $17.000, sin sabor
+      especificado. Si algún día vuelven los sabores, habrá que preguntar qué
+      frutas llevan antes de describirlos.
+- [ ] **Las dos arepas se llaman igual.** `Arepa de chontaduro` aparece dos veces
+      ($15.000 y $18.000) y solo las distingue la descripción, tal cual la carta
+      impresa. Si confunde a los huéspedes, vale la pena ponerle un nombre propio
+      a la de $18.000.
 - [ ] **`menu.pdf` desactualizado.** Ya no se enlaza, pero sigue siendo la carta
       vieja. Si algún día se quiere volver a ofrecer un PDF, hay que regenerarlo
       con la carta actual.
@@ -119,7 +168,8 @@ Cómo se edita: menu.json es la única fuente de verdad -> `python build.py`
 regenera index.html y en.html -> commit y push -> Pages publica en 1-2 min.
 El QR impreso apunta a una URL fija: cambiar precios NO obliga a reimprimir.
 
-Estado: 8 secciones, 51 platos + 2 adiciones, bilingüe ES/EN. El historial
+Estado: 8 secciones, 52 platos + 3 adiciones, bilingüe ES/EN, cuadrada
+con la carta impresa que tiene la dueña. El historial
 completo y las decisiones de traducción están en tasks/todo.md de ese repo:
 léelo antes de tocar nada, sobre todo la tabla de decisiones, para no
 deshacer sin querer cosas como "Huevos rancheros" o las glosas solo-en-inglés.

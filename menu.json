@@ -25,6 +25,7 @@
         { "name": { "es": "Espresso doble", "en": "Double espresso" }, "price": "7.000" },
         { "name": { "es": "Americano", "en": "Americano" }, "price": "8.000" },
         { "name": { "es": "Cappuccino", "en": "Cappuccino" }, "price": "10.000" },
+        { "name": { "es": "Cappuccino vainilla", "en": "Vanilla cappuccino" }, "price": "11.000" },
         { "name": { "es": "Latte", "en": "Latte" }, "price": "10.000" },
         { "name": { "es": "Flat white", "en": "Flat white" }, "price": "10.000" },
         { "name": { "es": "Macchiato", "en": "Macchiato" }, "price": "8.000" },
@@ -33,13 +34,22 @@
         { "name": { "es": "Milo", "en": "Milo" }, "price": "10.000" },
         { "name": { "es": "Chocolate", "en": "Hot chocolate" }, "price": "10.000" },
         { "name": { "es": "Chocolate con queso", "en": "Hot chocolate with cheese" }, "price": "14.000" },
-        { "name": { "es": "Chocolate masmelos", "en": "Hot chocolate with marshmallows" }, "price": "14.000" }
+        { "name": { "es": "Aromática", "en": "Herbal tea" }, "price": "5.000" },
+        {
+          "name": { "es": "Infusión de frutas", "en": "Fruit infusion" },
+          "price": "7.500",
+          "desc": {
+            "es": "Aromática a elección, fresa fresca y hojas de menta.",
+            "en": "Herbal tea of your choice, fresh strawberry and mint leaves."
+          }
+        }
       ],
       "box": {
         "title": { "es": "Adiciones", "en": "Add-ons" },
         "items": [
-          { "name": { "es": "Adición almendra", "en": "Almond milk" }, "price": "3.000" },
-          { "name": { "es": "Adición leche regular", "en": "Regular milk" }, "price": "2.000" }
+          { "name": { "es": "Leche de avena", "en": "Oat milk" }, "price": "3.000" },
+          { "name": { "es": "Zumo de limón / michelada", "en": "Lemon juice / michelada" }, "price": "3.000" },
+          { "name": { "es": "Adición de licor", "en": "Add a shot of liquor" }, "price": "8.000" }
         ]
       }
     },
@@ -134,8 +144,9 @@
           }
         },
         {
-          "name": { "es": "Huevos revueltos con jamón y queso", "en": "Scrambled eggs with ham and cheese" },
-          "price": "22.000"
+          "name": { "es": "Huevos revueltos", "en": "Scrambled eggs" },
+          "price": "22.000",
+          "desc": { "es": "Con jamón y queso.", "en": "With ham and cheese." }
         },
         {
           "name": { "es": "Huevos rancheros", "en": "Huevos rancheros" },
@@ -191,11 +202,19 @@
       "title": { "es": "Amasijos", "en": "Colombian breads" },
       "items": [
         {
-          "name": { "es": "Arepa de chontaduro con queso", "en": "Chontaduro arepa with cheese" },
-          "price": "10.000",
+          "name": { "es": "Arepa de chontaduro", "en": "Chontaduro arepa" },
+          "price": "15.000",
           "desc": {
             "es": "Con suero costeño y queso cuajada.",
             "en": "Peach palm fruit arepa, served with Colombian soured cream and fresh curd cheese."
+          }
+        },
+        {
+          "name": { "es": "Arepa de chontaduro", "en": "Chontaduro arepa" },
+          "price": "18.000",
+          "desc": {
+            "es": "Acompañado de queso crema y mermelada o arequipe.",
+            "en": "Peach palm fruit arepa, served with cream cheese and jam or dulce de leche."
           }
         },
         {
@@ -212,7 +231,7 @@
           }
         },
         {
-          "name": { "es": "Pandebono canasta x6", "en": "Pandebono — basket of 6" },
+          "name": { "es": "Pandebono x6", "en": "Pandebono — 6 pieces" },
           "price": "18.000",
           "desc": {
             "es": "Acompañado de queso crema y mermelada o arequipe.",
@@ -225,19 +244,17 @@
       "id": "postres",
       "title": { "es": "Postres", "en": "Desserts" },
       "items": [
-        { "name": { "es": "Torta chocolate", "en": "Chocolate cake" }, "price": "15.000" },
-        { "name": { "es": "Torta naranja y amapola", "en": "Orange & poppy seed cake" }, "price": "12.000" },
-        { "name": { "es": "Torta zanahoria", "en": "Carrot cake" }, "price": "12.000" },
-        { "name": { "es": "Torta banano", "en": "Banana cake" }, "price": "8.000" },
-        { "name": { "es": "Cheesecake de frutos amarillos", "en": "Yellow fruit cheesecake" }, "price": "15.000" },
-        { "name": { "es": "Cheesecake de frutos rojos", "en": "Red fruit cheesecake" }, "price": "15.000" },
+        { "name": { "es": "Cheesecake", "en": "Cheesecake" }, "price": "17.000" },
         {
           "name": { "es": "Tarta de lulo", "en": "Lulo tart" },
           "price": "15.000",
           "desc": { "en": "Made with lulo, a tangy Andean fruit." }
         },
+        { "name": { "es": "Torta chocolate", "en": "Chocolate cake" }, "price": "15.000" },
+        { "name": { "es": "Torta zanahoria", "en": "Carrot cake" }, "price": "12.000" },
         { "name": { "es": "Alfajor con arequipe", "en": "Alfajor with dulce de leche" }, "price": "5.000" },
-        { "name": { "es": "Alfajor de chocolate", "en": "Chocolate alfajor" }, "price": "7.000" }
+        { "name": { "es": "Alfajor de chocolate", "en": "Chocolate alfajor" }, "price": "7.000" },
+        { "name": { "es": "Torta de banano", "en": "Banana cake" }, "price": "8.000" }
       ]
     }
   ]
